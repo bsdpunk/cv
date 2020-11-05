@@ -2,15 +2,9 @@
 \usepackage{xltxtra}
 \usepackage{fontspec}
 \usepackage{tikz}
-\usepackage{eso-pic,graphicx}
 \usepackage[top=2cm, bottom=2cm, outer=0cm, inner=0cm]{geometry}
-\usepackage{xcolor}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
 \begin{document}
-\color{red}
 \fontspec{dg.otf}
-
 \name{Dusty Carver}
 \fontspec{wr.ttf}
 \contact{123 Broadway}{Nashville}{US}{dustycarver@gmail.com}{(615) 436-0496}
@@ -18,17 +12,17 @@
 \datedsubsection{High Tech Institue}{2005-2007}
 \datedsubsection{Hard Knocks}{1984-Present}
 \section{Work}
-\datedsubsection{Awesome Accomplisments}{1999-Present}
+\datedsubsection{ABC Limited}{2008-Now}
 \workitems
-{Developed knife weilding robot}
-{Created software to launch a Cloud server From a pebble watch}
-{Has 149 Unfinished github proects}
+{Developed new product}
+{Improved productivity by 20\%}
+{Decreased costs by \$10,000}
 
 \section{Skills}
 \begin{tabular}{l l l l}
 \LaTeX{} & BASH & Javascript & Python  \\
     Go & JSON & REST & Linux
 \end{tabular}
-\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{or.png}};
+\tikz[remember picture,overlay] \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{or.png}};
 \clearpage
 \end{document}
